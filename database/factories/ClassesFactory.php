@@ -18,6 +18,9 @@ class ClassesFactory extends Factory
     {
         return [
             //
+            "name"=>$this->faker->name(),
+            "description"=>$this->faker->text(),
+            "teacher_id"=>$this->faker->numberBetween(0,10),
         ];
     }
 }
