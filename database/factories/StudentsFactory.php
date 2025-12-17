@@ -23,7 +23,7 @@ class StudentsFactory extends Factory
             "email"=>$this->faker->email(),
             "dob"=>$this->faker->date(),
             "gender"=>$this->faker->randomElement(['m','f']),
-          "user_id"=>User::inRandomOrder()->first()->id,
+            "user_id"=>User::inRandomOrder()->first()->id,
             "class_id"=>Classes::inRandomOrder()->first()->id,
             
         ];
