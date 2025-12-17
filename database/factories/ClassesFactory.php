@@ -20,7 +20,7 @@ class ClassesFactory extends Factory
             //
             "name"=>$this->faker->name(),
             "description"=>$this->faker->text(),
-            "teacher_id"=>$this->faker->numberBetween(0,10),
+            "teacher_id"=>$this->faker->numberBetween(90,100),
         ];
     }
 }

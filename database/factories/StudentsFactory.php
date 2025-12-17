@@ -20,10 +20,10 @@ class StudentsFactory extends Factory
             //
             "name"=>$this->faker->name(),
             "email"=>$this->faker->email(),
-            "dob"=>$this->faker->numberBetween(5,80),
+            "dob"=>$this->faker->date(),
             "gender"=>$this->faker->randomElement(['m','f']),
-            "user_id"=>$this->faker->numberBetween(0,100),
-            "class_id"=>$this->faker->numberBetween(0,5),
+            "user_id"=>$this->faker->numberBetween(1,90),
+            "class_id"=>$this->faker->numberBetween(1,5),
         ];
     }
 }
