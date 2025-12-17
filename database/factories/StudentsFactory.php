@@ -1,7 +1,8 @@
 <?php
 
 namespace Database\Factories;
-
+use App\Models\User;
+use App\Models\Classes;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -22,8 +23,9 @@ class StudentsFactory extends Factory
             "email"=>$this->faker->email(),
             "dob"=>$this->faker->date(),
             "gender"=>$this->faker->randomElement(['m','f']),
-            "user_id"=>$this->faker->numberBetween(1,90),
-            "class_id"=>$this->faker->numberBetween(1,5),
+          "user_id"=>User::inRandomOrder()->first()->id,
+            "class_id"=>Classes::inRandomOrder()->first()->id,
+            
         ];
     }
 }

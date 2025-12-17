@@ -3,7 +3,8 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-
+use App\Models\User;
+use App\Models\Teachers;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Classes>
  */
@@ -20,7 +21,7 @@ class ClassesFactory extends Factory
             //
             "name"=>$this->faker->name(),
             "description"=>$this->faker->text(),
-            "teacher_id"=>$this->faker->numberBetween(90,100),
+             "teacher_id"=>Teachers::inRandomOrder()->first()->id,
         ];
     }
 }
