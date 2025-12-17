@@ -9,4 +9,7 @@ class Classes extends Model
 {
     /** @use HasFactory<\Database\Factories\ClassesFactory> */
     use HasFactory;
+    public function teacher(){
+        return $this->belongsTo(Teachers::class,'class_id', 'id');
+    }
 }

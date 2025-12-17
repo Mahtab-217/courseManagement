@@ -9,7 +9,7 @@ class TeachersController extends Controller
 {
     //
     public function index(){
-        $teachers=Teachers::with('users')->get();
+        $teachers=Teachers::with('classes')->get();
         return $teachers;
     }
 }

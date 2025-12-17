@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClassesController;
 use App\Http\Controllers\StudentsController;
 use App\Http\Controllers\TeachersController;
 use Illuminate\Support\Facades\Route;
@@ -10,3 +11,4 @@ Route::get('/', function () {
 Route::get('users',[UserController::class,'index']);
 Route::get('student',[StudentsController::class,'index']);
 Route::get('teachers',[TeachersController::class,'index']);
+Route::get('classes',[ClassesController::class,'index']);
