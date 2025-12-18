@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Teachers;
 use App\Models\Students;
 use App\Models\Classes;
+use App\Models\Subject;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -18,11 +19,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-         User::factory(200)->create();
-         Teachers::factory(10)->create();
-          Classes::factory(5)->create();
-         Students::factory(90)->create();
-       
+        //  User::factory(200)->create();
+        //  Teachers::factory(10)->create();
+        //   Classes::factory(5)->create();
+        //  Students::factory(90)->create();
+       Subject::factory(5)->create();
 
         // User::factory()->create([
         //     'name' => 'Test User',
