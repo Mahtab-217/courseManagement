@@ -9,7 +9,7 @@ class StudentsController extends Controller
 {
     //
     public function index(){
-        $students=Students::with('subject','teacher')->get();
+        $students=Students::with('subject','teacher')->where('id',">",'85')->get();
         return $students;
     }
 }
