@@ -19,4 +19,5 @@ class TeachersController extends Controller
     $users=User::all();
     return view('Teacher.add', compact('users'));
    }
+   
 }
