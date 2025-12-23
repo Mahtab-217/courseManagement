@@ -15,12 +15,12 @@
                 @csrf
                 <input type="text" placeholder="Name" name="name" class="w-full py-2 border rounded-md focus:outline-0 ">
                 <input type="text" placeholder="Phone Number" name="phoneNumber" class="w-full py-2 border rounded-md focus:outline-0 ">
-                <select name="" id="" name="image" class="w-full py-2 border rounded-md focus:outline-0 ">
+                <select name="" id="" name="user_id" class="w-full py-2 border rounded-md focus:outline-0 ">
                    @foreach ($users as $user)
                     <option value="{{ $user->id }}">{{$user->name}}</option>   
                    @endforeach
                 </select>
-                <input type="file" accept="image/*" class="py-2 w-full border rounded-md">
+                <input type="file" accept="image/*" name="image" class="py-2 w-full border rounded-md">
                 <input type="submit" value="Add" class="w-fit bg-green-600 text-white py-1.5 px-5 rounded-xs">
             </form>
         </div>
