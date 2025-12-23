@@ -14,8 +14,8 @@ class TeachersController extends Controller
 {
     //
     public function index(){
-        $teachers=Teachers::with('classes','students')->where('id',">",'5')->get();
-        return $teachers;
+        $teachers=Teachers::all();
+        return view('Teacher.allTeachers');
     }
    public function showAddForm(){
     $users=User::all();
@@ -47,4 +47,5 @@ class TeachersController extends Controller
    $image->save();
    return redirect('/');
    }
+
 }
