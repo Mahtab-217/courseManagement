@@ -8,7 +8,7 @@ class UserController extends Controller
 {
     //
     public function index(){
-       $allusers=User::with('teacher','student')->get();
+       $allusers=User::all();
         return $allusers;
     }
 }

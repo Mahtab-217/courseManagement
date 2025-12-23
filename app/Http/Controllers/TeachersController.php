@@ -27,6 +27,7 @@ class TeachersController extends Controller
         "name"=>"required|min:3|max:20",
         "phoneNumber"=>"required|min:10|max:15",
         "image"=>"nullable|image|mimes:png,jpg,gif,jpeg",
+        
 
     ]);
     $path=null;
@@ -38,6 +39,7 @@ class TeachersController extends Controller
     $teacher->phoneNumber=$request->phoneNumber;
     $teacher->user_id=$request->user_id;
     $teacher->save();
+
    $image = new images();
    $image->path=$path;
    $image->imageable_id=$teacher->id;
