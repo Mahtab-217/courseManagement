@@ -15,7 +15,7 @@ class TeachersController extends Controller
     //
     public function index(){
         $teachers=Teachers::all();
-        return view('Teacher.allTeachers');
+        return view('Teacher.allTeachers')->with('teachers',$teachers);
     }
    public function showAddForm(){
     $users=User::all();
@@ -31,7 +31,7 @@ class TeachersController extends Controller
 
     ]);
     $path=null;
-    if($request->hasFile("images")){
+    if($request->hasFile("image")){
         $path= $request->file("image")->store("images","public");
     }
 
