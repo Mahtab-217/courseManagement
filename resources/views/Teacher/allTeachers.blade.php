@@ -11,23 +11,23 @@
 <body>
     <div class="w-full">
         <div class="w-11/12 mx-auto">
-        <h1>All Teachers</h1>
+        <h1 class="font-bold text-2xl text-center ">All Teachers</h1>
     </div>
-    <table class="border">
+    <table class="border m-auto">
     <tr>
-        <th class="p-2 border text-center">ID</th>
-        <th class="p-2 border text-center">name</th>
-        <th class="p-2 border text-center">PhoneNumber</th>
-        <th class="p-2 border text-center">Image</th>
+        <th class="p-2 border text-center font-bold">ID</th>
+        <th class="p-2 border text-center font-bold">name</th>
+        <th class="p-2 border text-center font-bold">PhoneNumber</th>
+        <th class="p-2 border text-center font-bold">Image</th>
     </tr>
     @foreach ($teachers as $teacher )
     <tr>
-        <td class="border">{{ $teacher->id}}</td>
-        <td class="border">{{ $teacher->name}}</td>
-        <td class="border">{{ $teacher->phoneNumber}}</td>
-       @if (count($teacher->image->path))
+        <td class="border gap-5 p-1 ">{{ $teacher->id}}</td>
+        <td class="border gap-5 p-1 ">{{ $teacher->name}}</td>
+        <td class="border gap-5 p-1 ">{{ $teacher->phoneNumber}}</td>
+       @if (count($teacher->images)>0)
            <td>
-            <img src="{{ 'asset'.$teacher->images->path }}" alt="">
+            <img src="{{ 'storage/'.$teacher->images[0]->path }}" class="w-16 h-11" alt="">
            </td>
        @endif
     </tr>
