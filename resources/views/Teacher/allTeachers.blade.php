@@ -13,18 +13,18 @@
         <div class="w-11/12 mx-auto">
         <h1 class="font-bold text-2xl text-center ">All Teachers</h1>
     </div>
-    <table class="border m-auto">
+    <table class="border m-auto ">
     <tr>
-        <th class="p-2 border text-center font-bold">ID</th>
-        <th class="p-2 border text-center font-bold">name</th>
-        <th class="p-2 border text-center font-bold">PhoneNumber</th>
-        <th class="p-2 border text-center font-bold">Image</th>
+        <th class="p-2 border text-center font-bold  hover:bg-stone-200">ID</th>
+        <th class="p-2 border text-center font-bold hover:bg-stone-200">name</th>
+        <th class="p-2 border text-center font-bold hover:bg-stone-200">PhoneNumber</th>
+        <th class="p-2 border text-center font-bold hover:bg-stone-200">Image</th>
     </tr>
     @foreach ($teachers as $teacher )
     <tr>
-        <td class="border gap-5 p-1 ">{{ $teacher->id}}</td>
-        <td class="border gap-5 p-1 ">{{ $teacher->name}}</td>
-        <td class="border gap-5 p-1 ">{{ $teacher->phoneNumber}}</td>
+        <td class="border gap-5 p-1 hover:bg-stone-200 ">{{ $teacher->id}}</td>
+        <td class="border gap-5 p-1 hover:bg-stone-200 ">{{ $teacher->name}}</td>
+        <td class="border gap-5 p-1 hover:bg-stone-200 ">{{ $teacher->phoneNumber}}</td>
        @if (count($teacher->images)>0)
            <td>
             <img src="{{ 'storage/'.$teacher->images[0]->path }}" class="w-16 h-11" alt="">
@@ -36,4 +36,4 @@
     </table>
     </div>
 </body>
-</html>
+</html>,
