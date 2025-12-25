@@ -21,7 +21,7 @@
                    @endforeach
                 </select>
                 <input type="file" accept="image/*" name="image" class="py-2 w-full border rounded-md">
-                <input type="submit" value="Save" class="w-fit bg-green-600 text-white py-1.5 px-5 rounded-xs">
+                <input type="submit" value="Add" class="w-fit bg-green-600 text-white py-1.5 px-5 rounded-xs">
             </form>
         </div>
     </div>
